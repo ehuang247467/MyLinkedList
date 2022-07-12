@@ -15,7 +15,7 @@ class MyLinkedList:
         returnNode = self.getNth(index)
         return returnNode.getElement()
     
-    def add(self, data, index = None):
+    def add(self, data, index=None):
         if data == None:
             raise ValueError("Element cannot be None")
         if index == None:
