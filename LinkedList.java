@@ -9,15 +9,18 @@ public class LinkedList<E> {
         this.tail.setNext(null);
         this.size = 0;
     }
+
     public int length() {
         return this.size;
     }
+
     public Node get(int index) {
         if (index < 0 || index >= this.size) 
             throw new IndexOutOfBoundsException();
         Node returnNode = this.getNth(index);
         return returnNode;
     }
+
     private Node getNth(int index) {
         if (index < 0 || index >= this.size) 
             throw new IndexOutOfBoundsException();
@@ -27,6 +30,7 @@ public class LinkedList<E> {
         }
         return curNode;
     }
+
     private class Node {
         E data;
         Node next;
@@ -35,15 +39,19 @@ public class LinkedList<E> {
             this.data = data;
             this.next = null;
         }
+
         public void setNext(Node next) {
             this.next = next;
         }
+
         public void setElement(E element) {
             this.data = element;
         }
+        
         public Node getNext() {
             return this.next;
         }
+
         public E getElement() {
             return data;
         }
