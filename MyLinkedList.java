@@ -106,7 +106,7 @@ public class MyLinkedList<E> {
         }
 
         private E getData() {
-            return data;
+            return this.data;
         }
     }
 }
