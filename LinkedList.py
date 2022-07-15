@@ -1,4 +1,4 @@
-class MyLinkedList:
+class LinkedList:
     def __init__(self):
         self.head = self.Node(None)
         self.tail = self.Node(None)
@@ -13,11 +13,11 @@ class MyLinkedList:
         if index < 0 or index >= self.size:
             raise IndexError("Index out of bounds")
         returnNode = self.getNth(index)
-        return returnNode.getElement()
+        return returnNode.getData()
     
     def add(self, data, index=None):
         if data == None:
-            raise ValueError("Element cannot be None")
+            raise ValueError("Data cannot be None")
         if index == None:
             index = self.size
         if index < 0 or index > self.size:
@@ -34,8 +34,8 @@ class MyLinkedList:
         if index < 0 or index >= self.size:
             raise IndexError("Index out of bounds")
         setNode = self.getNth(index)
-        toReturn = setNode.getElement()
-        setNode.setElement(data)
+        toReturn = setNode.getData()
+        setNode.setData(data)
         return toReturn
 
     def remove(self, index):
@@ -47,7 +47,7 @@ class MyLinkedList:
         curNode = prevNode.getNext()
         prevNode.setNext(curNode.getNext())
         self.size -= 1
-        return curNode.getElement()
+        return curNode.getData()
 
     def clear(self):
         self.head.setNext(self.tail)
@@ -74,11 +74,11 @@ class MyLinkedList:
         def setNext(self, next):
             self.next  = next
 
-        def setElement(self, element):
-            self.data = element
+        def setData(self, data):
+            self.data = data
 
         def getNext(self):
             return self.next
 
-        def getElement(self):
+        def getData(self):
             return self.data
