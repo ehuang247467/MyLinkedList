@@ -31,6 +31,8 @@ class LinkedList:
         self.size += 1
 
     def set(self, data, index):
+        if data == None:
+            raise ValueError("Data cannot be None")
         if index < 0 or index >= self.size:
             raise IndexError("Index out of bounds")
         setNode = self.getNth(index)
