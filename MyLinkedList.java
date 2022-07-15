@@ -73,7 +73,7 @@ public class MyLinkedList<E> {
         if (this.size == 0) return true;
         return false;
     }
-    
+
     private Node getNth(int index) {
         if (index < 0 || index >= this.size) 
             throw new IndexOutOfBoundsException("Index out of bounds");
@@ -85,27 +85,27 @@ public class MyLinkedList<E> {
     }
 
     private class Node {
-        E data;
-        Node next;
+        private E data;
+        private Node next;
 
-        public Node(E data) {
+        private Node(E data) {
             this.data = data;
             this.next = null;
         }
 
-        public void setNext(Node next) {
+        private void setNext(Node next) {
             this.next = next;
         }
 
-        public void setData(E data) {
+        private void setData(E data) {
             this.data = data;
         }
 
-        public Node getNext() {
+        private Node getNext() {
             return this.next;
         }
 
-        public E getData() {
+        private E getData() {
             return data;
         }
     }
