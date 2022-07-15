@@ -1,4 +1,4 @@
-class LinkedList:
+class MyLinkedList:
     def __init__(self):
         self.head = self.Node(None)
         self.tail = self.Node(None)
