@@ -62,7 +62,7 @@ class MyLinkedList:
 
     def getNth(self, index):
         if index < 0 or index >= self.size:
-            raise ValueError
+            raise IndexError("Index out of bounds")
         curNode = self.head.getNext()
         for i in range(index):
             curNode = curNode.getNext()
