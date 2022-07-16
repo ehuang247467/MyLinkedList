@@ -20,6 +20,7 @@ class MyLinkedList {
         Node *tail;
         int size;
         Node *getNth(int index);
+        
     public:
         MyLinkedList();
         int length();
