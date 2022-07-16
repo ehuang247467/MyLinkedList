@@ -1,5 +1,6 @@
 #include <stdexcept>
 using namespace std;
+
 template <class E>
 class MyLinkedList {
     private:
