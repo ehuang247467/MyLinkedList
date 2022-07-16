@@ -10,10 +10,6 @@ struct Node {
 template <class E>
 class MyLinkedList {
     public:
-        Node<E> *head;
-        Node<E> *tail;
-        int size;
-
         MyLinkedList() {
             this->head = new Node<E>;
             this->head->data = NULL;
@@ -91,6 +87,10 @@ class MyLinkedList {
         }
 
     private:
+        Node<E> *head;
+        Node<E> *tail;
+        int size;
+
         Node<E> *getNth(int index) {
             if (index < 0 || index >= this->size)
                 throw out_of_range("Index out of bounds");
