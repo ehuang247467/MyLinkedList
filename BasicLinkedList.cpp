@@ -87,8 +87,7 @@ class MyLinkedList {
         }
 
     private:
-        Node<E> *head;
-        Node<E> *tail;
+        Node<E> *head, *tail;
         int size;
 
         Node<E> *getNth(int index) {

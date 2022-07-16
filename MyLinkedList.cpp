@@ -16,11 +16,10 @@ class MyLinkedList {
                 E getData();
         };
 
-        Node *head;
-        Node *tail;
+        Node *head, *tail;
         int size;
         Node *getNth(int index);
-        
+
     public:
         MyLinkedList();
         int length();
